@@ -1,0 +1,155 @@
+/*GENERAL*/
+body,
+ul {
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: teal;
+}
+
+ul {
+  list-style: none;
+}
+
+/*MOBILE < 600px*/
+.menu-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+  border-bottom: solid 1px rgba(200, 200, 200, 0.5);
+  position: relative;
+}
+
+.links {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  background-color: rgb(252, 252, 252);
+  height: 100vh;
+  width: 60%;
+  border-right: solid 1px rgba(200, 200, 200, 0.5);
+  visibility: hidden;
+}
+
+@keyframes open-menu {
+  from {
+    left: -60%;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes close-menu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -60%;
+  }
+}
+
+.links li {
+  margin: 5vw 5vw;
+}
+
+.customer-infos {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.burger-button {
+  margin: 0 5vw;
+}
+
+.avatar {
+  margin: 2vh 5vw;
+}
+
+.burger-button img,
+.cart img {
+  width: 5vw;
+}
+
+.logo img {
+  width: 25vw;
+}
+
+.avatar img {
+  width: 10vw;
+}
+
+/*DESKTOP > 600PX*/
+@media screen and (min-width: 600px) {
+  .links {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: inherit;
+    width: inherit;
+    border-right: none;
+    visibility: visible;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  .logo img {
+    width: 150px;
+    margin: 2vh 15px;
+  }
+
+  .cart img {
+    width: 30px;
+  }
+
+  .avatar img {
+    width: 60px;
+  }
+
+  .avatar {
+    margin: 2vh 30px;
+  }
+
+  .links li a {
+    margin: 2vh 0.8vw;
+    font-size: 0.8rem;
+  }
+
+  .links li {
+    margin: 0;
+  }
+
+  .links > li:nth-child(1) {
+    display: none;
+  }
+}
+
+/*DESKTOP > 800PX*/
+@media screen and (min-width: 800px) {
+  .links li a {
+    font-size: 1.2rem;
+  }
+
+  .links li {
+    margin: 0;
+  }
+
+  .links > li:nth-child(1) {
+    display: none;
+  }
+}
